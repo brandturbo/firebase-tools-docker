@@ -31,7 +31,6 @@ RUN apk --no-cache add openjdk11-jre bash && \
     firebase -V && \
     java -version && \
     chown -R node:node $HOME
-USER node
 VOLUME $HOME/.cache
 WORKDIR $HOME
 CMD ["firebase","emulators:start"]
